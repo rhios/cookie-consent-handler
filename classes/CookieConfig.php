@@ -42,13 +42,8 @@ class CookieConfig extends CookieMagicData
             throw new Exception("Config file " . CCH_CONFIG_FILE . " does not exist or is not " .
                                 "accessible to this script.");
         }
-        include_once CCH_CONFIG_FILE;
-        
-        // Validate config contents
-        if (!isset($config) || empty($config)) {
-            throw new Exception(
-                    "No configuration array (\$config) present in config file: " . CCH_CONFIG_FILE);
-        }
+        $config = array();
+        include CCH_CONFIG_FILE;
         
         // Store config so it is accessible via CookieMagicData defined magic methods
         $this->_data = $config;

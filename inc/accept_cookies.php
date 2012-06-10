@@ -8,6 +8,7 @@
 
 require_once CCH_CLASSES . '/CookieUtils.php';
 require_once CCH_CLASSES . '/CookieConfig.php';
+require_once CCH_CLASSES . '/CookieConsentHandler.php';
 
 $utils = new CookieUtils();
 $config = new CookieConfig();

@@ -19,6 +19,7 @@ along with cookie-consent-handler.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 require_once CCH_CLASSES . '/CookieConfig.php';
+require_once CCH_CLASSES . '/CookieUtils.php';
 require_once CCH_CLASSES . '/CookieView.php';
 
 /**
@@ -178,7 +179,7 @@ class CookieConsentBar
             $utils = new CookieUtils();
             $safeQuery = array();
             foreach ($query as $param => $value) {
-                $safeQuery[$utils->xssClean($param)] = $this->xssClean($value);
+                $safeQuery[$utils->xssClean($param)] = $utils->xssClean($value);
             }
             
             // Add acceptance param

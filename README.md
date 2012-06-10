@@ -6,8 +6,14 @@ Simple PHP 5+ Handler for Cookie Consent Laws.
 This is intended to be a drop-in solution for any third-party or custom built PHP application that
 uses PHP's built-in session_start() function.
 
-Integrating cookie-consent-handler and handling session_starts():
-=================================================================
+Quick Start:
+==================================================================
+
+Look at examples/example1.php
+
+
+Integrating cookie-consent-handler and handling session_start()'s:
+==================================================================
 
 Somewhere in your application, require the consent handler init file:
 
@@ -81,7 +87,6 @@ xssClean() methods in the CookieUtils class to suit your setup/security policy.
 You might want to add the relevant requires to the end of the init script to make things a little
 easier. Eg.
 
-// In inc/init_cookie_consent_handler.php
 require_once CCH_CLASSES . '/CookieConsentHandler.php';
 require_once CCH_CLASSES . '/CookieConsentBar.php';
 
